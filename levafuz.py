@@ -1,9 +1,8 @@
 from fuzzywuzzy import process
-from kommanden import command_sound
 import os
 
-from kommanden import play_sound
 from kommanden import command_sound
+from kommanden import play_sound
 
 import random
 
@@ -51,6 +50,9 @@ komtegory = {
     ],
     "Прощание": [
         "Пока", "Прощай"
+    ],
+    "Отсутствие": [
+        "None"
     ]
     # Добавьте здесь другие команды с их вариациями
     # ...
@@ -59,13 +61,6 @@ komtegory = {
 
 def process_command(command_text):
     command_sound()
-
-    # Получение списка файлов и воспроизведение случайного файла
-    command_files = os.listdir(command_sound_folder)
-    random_file = random.choice(command_files)
-    full_path_to_file = os.path.join(command_sound_folder, random_file)
-    play_sound(full_path_to_file)
-
     # Ищем наилучшее соответствие для команды
     best_match = None
     highest_score = 0

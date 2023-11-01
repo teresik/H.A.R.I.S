@@ -1,12 +1,8 @@
 from pvporcupine import create as create_porcupine
 from pvrecorder import PvRecorder
 
-import config
-from fuzzywuzzy import fuzz
-
 import kommanden
 from kommanden import command_actions
-from kommanden import command_sound
 
 from time_utils import get_greeting, get_farewell
 from time_utils import va_sprech_chao, va_sprech_hallo
@@ -18,6 +14,7 @@ import numpy as np
 
 from govor import va_speak
 from config import va_listen
+from config import listen_with_timeout
 
 import os
 import pygame
@@ -84,14 +81,6 @@ def record_until_silence(threshold=0.02, silence_duration=1, sample_rate=16000):
     return np.concatenate(buffer, axis=0)
 
 def handle_command(command_text):
-
-    # Получение списка файлов в директории 'sound/command'
-    command_files = os.listdir(command_sound_folder)
-    # Выбор случайного файла
-    random_file = random.choice(command_files)
-    full_path_to_file = os.path.join(command_sound_folder, random_file)
-    play_sound(full_path_to_file)
-
     # Используем levafuz для определения команды
     recognized_command = levafuz.process_command(command_text)
     if recognized_command in command_actions:
@@ -117,6 +106,7 @@ def main():
                 if keyword_detected:  # Предположим, что это условие проверяет обнаружение ключевого слова
                     audio = record_until_silence()
                     # Теперь у вас есть запись команды, которую можно отправить на обработку
+
 
 
     except KeyboardInterrupt:

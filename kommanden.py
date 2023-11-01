@@ -8,6 +8,8 @@ import webbrowser
 hello_sound_folder = 'sound/hello'
 chao_sound_folder = 'sound/chao'
 command_sound_folder = 'sound/commands'
+help_sound_folder = 'sound/help'
+os.makedirs(help_sound_folder, exist_ok=True)
 os.makedirs(command_sound_folder, exist_ok=True)
 os.makedirs(chao_sound_folder, exist_ok=True)
 os.makedirs(hello_sound_folder, exist_ok=True)
@@ -44,6 +46,10 @@ def execute(category):
 
         chao_sound()
 
+    elif category == "Отсутствие":
+        print("Вы отсутствовали!")
+
+
 
 # Добавьте здесь другие функции для обработки команд
 
@@ -76,6 +82,13 @@ def chao_sound():
     # Выбор случайного файла
     random_file = random.choice(chao_files)
     full_path_to_file = os.path.join(chao_sound_folder, random_file)
+    play_sound(full_path_to_file)
+def help_sound():
+    # Получение списка файлов в директории 'sound/hello'
+    help_files = os.listdir(help_sound_folder)
+    # Выбор случайного файла
+    random_file = random.choice(help_files)
+    full_path_to_file = os.path.join(help_sound_folder, random_file)
     play_sound(full_path_to_file)
 
 command_actions = {

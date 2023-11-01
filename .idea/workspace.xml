@@ -82,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698777308064</updated>
       <workItem from="1698777311739" duration="3226000" />
-      <workItem from="1698856607979" duration="719000" />
+      <workItem from="1698856607979" duration="1297000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -115,6 +115,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Haris_v1_0$HARIS.coverage" NAME="HARIS Coverage Results" MODIFIED="1698857968673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/H_A_R_I_S_v1_0$HARIS.coverage" NAME="HARIS Coverage Results" MODIFIED="1698777787523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

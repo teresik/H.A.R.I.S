@@ -1,5 +1,14 @@
 from fuzzywuzzy import process
 from kommanden import command_sound
+import os
+
+from kommanden import play_sound
+from kommanden import command_sound
+
+import random
+
+command_sound_folder = 'sound/commands'
+os.makedirs(command_sound_folder, exist_ok=True)
 
 SOME_THRESHOLD = 80
 
@@ -50,6 +59,13 @@ komtegory = {
 
 def process_command(command_text):
     command_sound()
+
+    # Получение списка файлов и воспроизведение случайного файла
+    command_files = os.listdir(command_sound_folder)
+    random_file = random.choice(command_files)
+    full_path_to_file = os.path.join(command_sound_folder, random_file)
+    play_sound(full_path_to_file)
+
     # Ищем наилучшее соответствие для команды
     best_match = None
     highest_score = 0

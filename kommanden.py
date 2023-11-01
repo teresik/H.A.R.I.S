@@ -23,14 +23,10 @@ def farewell():
 
 def execute(category):
     if category == "Приветствие":
-        
-        print("Привет! Чем могу помочь?")
 
-        # Получение списка файлов и воспроизведение случайного файла
-        hello_files = os.listdir(hello_sound_folder)
-        random_file = random.choice(hello_files)
-        full_path_to_file = os.path.join(hello_sound_folder, random_file)
-        play_sound(full_path_to_file)
+        hello_sound()
+
+        print("Привет! Чем могу помочь?")
 
     elif category == "Контроль освещения":
         pass
@@ -46,12 +42,7 @@ def execute(category):
     elif category == "Прощание":
         print("Прощание")
 
-        # Получение списка файлов в директории 'sound/hello'
-        chao_files = os.listdir(chao_sound_folder)
-        # Выбор случайного файла
-        random_file = random.choice(chao_files)
-        full_path_to_file = os.path.join(chao_sound_folder, random_file)
-        play_sound(full_path_to_file)
+        chao_sound()
 
 
 # Добавьте здесь другие функции для обработки команд
@@ -71,6 +62,21 @@ def command_sound():
     full_path_to_file = os.path.join(command_sound_folder, random_file)
     play_sound(full_path_to_file)
 
+def hello_sound():
+    # Получение списка файлов в директории 'sound/hello'
+    hello_files = os.listdir(hello_sound_folder)
+    # Выбор случайного файла
+    random_file = random.choice(hello_files)
+    full_path_to_file = os.path.join(hello_sound_folder, random_file)
+    play_sound(full_path_to_file)
+
+def chao_sound():
+    # Получение списка файлов в директории 'sound/hello'
+    chao_files = os.listdir(chao_sound_folder)
+    # Выбор случайного файла
+    random_file = random.choice(chao_files)
+    full_path_to_file = os.path.join(chao_sound_folder, random_file)
+    play_sound(full_path_to_file)
 
 command_actions = {
     "Приветствие": greet,

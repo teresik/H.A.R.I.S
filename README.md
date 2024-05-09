@@ -1,6 +1,6 @@
 # H.A.R.I.S (v1.0)
 H.A.R.I.S (Human-AI Responsive Interactive System) is a high-tech voice assistant created to make users' everyday lives easier. H.A.R.I.S. has powerful artificial intelligence and neural network capabilities that make it more than just a voice interface. It becomes your loyal companion in solving various tasks.
-# Основные функции H.A.R.I.S.:
+# The main functions of H.A.R.I.S. are:
 # 1 Voice control: 
 You can control your device, send messages, search for information on the Internet, and perform many other actions just by using your voice.
 
